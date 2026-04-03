@@ -1,4 +1,4 @@
-package Aoopproject;
+package project.tokenizer;
 
 public enum TokenType {
     // Keywords
