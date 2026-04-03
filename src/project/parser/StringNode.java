@@ -1,4 +1,5 @@
-package Aoopproject;
+package project.parser;
+import project.interpreter.Environment;
 
 public class StringNode implements Expression {
     private final String value;
