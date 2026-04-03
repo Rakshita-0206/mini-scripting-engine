@@ -1,4 +1,5 @@
-package Aoopproject;
+package project.parser;
+import project.interpreter.Environment;
 
 public class BinaryOpNode implements Expression {
     private final Expression left;
