@@ -1,4 +1,6 @@
-package Aoopproject;
+package project.parser;
+
+import project.interpreter.Environment;
 
 public class VariableNode implements Expression {
     private final String name;
