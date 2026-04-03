@@ -1,4 +1,13 @@
-package Aoopproject;
+package project.parser;
+
+import project.interpreter.Environment;
+import project.interpreter.Instruction;
+import project.interpreter.AssignInstruction;
+import project.interpreter.PrintInstruction;
+import project.interpreter.IfInstruction;
+import project.interpreter.RepeatInstruction;
+import project.tokenizer.Token;
+import project.tokenizer.TokenType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -95,8 +104,6 @@ public class Parser {
         return body;
     }
 
-    // --- Expression parsing (handles operator precedence) ---
-
     // Handles + and - (lowest precedence)
     private Expression parseExpression() {
         Expression left = parseTerm();
@@ -140,15 +147,8 @@ public class Parser {
                 + t.getLine() + " but got: \"" + t.getValue() + "\"");
     }
 
-    // --- Utility helpers ---
-
-    private Token peek() {
-        return tokens.get(pos);
-    }
-
-    private Token advance() {
-        return tokens.get(pos++);
-    }
+    private Token peek() { return tokens.get(pos); }
+    private Token advance() { return tokens.get(pos++); }
 
     private Token consume(TokenType expected) {
         Token t = peek();
