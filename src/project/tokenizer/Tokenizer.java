@@ -1,4 +1,4 @@
-package Aoopproject;
+package project.tokenizer;
 import java.util.ArrayList;
 import java.util.List;
 public class Tokenizer {
